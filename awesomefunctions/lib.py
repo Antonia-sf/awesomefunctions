@@ -10,7 +10,7 @@ import datetime
 pd.set_option('display.width', 200)
 
 import string
-from nltk.corpus import stopwords
+#from nltk.corpus import stopwords
 
 def data_cleaning(sentence):
     for punctuation in string.punctuation:
