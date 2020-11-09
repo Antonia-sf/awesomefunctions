@@ -6,8 +6,11 @@ import awesomefunctions
 import pandas as pd
 # Import from our lib
 from awesomefunctions.lib import clean_data
+from awesomefunctions.lib import data_cleaning
 import pytest
 
+def test_data_cleaning():
+    assert data_cleaning('My name is 333') == 'my name is '
 
 def test_clean_data():
     datapath = os.path.dirname(os.path.abspath(awesomefunctions.__file__)) + '/data'

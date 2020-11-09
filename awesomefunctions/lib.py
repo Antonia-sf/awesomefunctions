@@ -9,6 +9,18 @@ import datetime
 
 pd.set_option('display.width', 200)
 
+import string
+from nltk.corpus import stopwords
+
+def data_cleaning(sentence):
+    for punctuation in string.punctuation:
+        sentence = [word.replace(punctuation, '')for word in sentence]
+    sentence = [word.lower() for word in sentence]
+    sentence = ''.join(word for word in sentence if not word.isdigit())
+    #stop_words = set(stopwords.words('english'))
+    #word_tokens = word_tokenize(text)
+    #text = [w for w in word_tokens if not w in stop_words]
+    return sentence
 
 def clean_data(data):
     """ clean data
